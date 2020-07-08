@@ -7,13 +7,13 @@ import io.micronaut.http.annotation.Controller;
 import reactor.core.publisher.Mono;
 
 /**
- * Just response OK
+ * Just response OK with empty body
  */
 @Controller("/service")
 public class ServiceController implements ServiceApi {
   @Override
   public HttpResponse<String> blocking(Request request) {
-    return HttpResponse.ok().body("hi");
+    return HttpResponse.ok();
   }
 
   @Override
